@@ -3687,14 +3687,14 @@ the specific language governing permissions and limitations under the Apache Lic
     $.fn.select2.locales = [];
 
     $.fn.select2.locales['en'] = {
-         formatMatches: function (matches) { if (matches === 1) { return "One result is available, press enter to select it."; } return matches + " results are available, use up and down arrow keys to navigate."; },
-         formatNoMatches: function () { return "No matches found"; },
-         formatAjaxError: function (jqXHR, textStatus, errorThrown) { return "Loading failed"; },
-         formatInputTooShort: function (input, min) { var n = min - input.length; return "Please enter " + n + " or more character" + (n == 1 ? "" : "s"); },
-         formatInputTooLong: function (input, max) { var n = input.length - max; return "Please delete " + n + " character" + (n == 1 ? "" : "s"); },
-         formatSelectionTooBig: function (limit) { return "You can only select " + limit + " item" + (limit == 1 ? "" : "s"); },
-         formatLoadMore: function (pageNumber) { return "Loading more results…"; },
-         formatSearching: function () { return "Searching…"; }
+        formatMatches: function (matches) { if (matches === 1) { return "Um resultado encontrado, pressione enter para selecioná-lo."; } return matches + " resultados encontrados, use a seta para cima e para baixo para navegar."; },
+        formatNoMatches: function () { return "Nenhum resultado encontrado"; },
+        formatAjaxError: function () { return "Erro na busca"; },
+        formatInputTooShort: function (input, min) { var n = min - input.length; return "Digite " + (min == 1 ? "" : "mais") + " " + n + " caracter" + (n == 1? "" : "es"); },
+        formatInputTooLong: function (input, max) { var n = input.length - max; return "Apague " + n + " caracter" + (n == 1? "" : "es"); },
+        formatSelectionTooBig: function (limit) { return "Só é possível selecionar " + limit + " elemento" + (limit == 1 ? "" : "s"); },
+        formatLoadMore: function (pageNumber) { return "Carregando mais resultados…"; },
+        formatSearching: function () { return "Buscando…"; }
     };
 
     $.extend($.fn.select2.defaults, $.fn.select2.locales['en']);
